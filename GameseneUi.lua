@@ -11,7 +11,6 @@ local Mouse = LocalPlayer:GetMouse();
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 
 local ScreenGui = Instance.new('ScreenGui');
-ProtectGui(ScreenGui);
 
 ScreenGui.Name = 'Gamesense'
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
@@ -383,6 +382,9 @@ do
             Visible = false;
             ZIndex = 15;
             Parent = Container.Parent;
+            local UICorner = Instance.new("UICorner")
+            UICorner.CornerRadius = UDim.new(0, 20)
+            UICorner.Parent = PickerFrameOuter
         });
 
         local PickerFrameInner = Library:Create('Frame', {
