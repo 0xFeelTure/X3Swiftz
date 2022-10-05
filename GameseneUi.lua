@@ -382,9 +382,6 @@ do
             Visible = false;
             ZIndex = 15;
             Parent = Container.Parent;
-            local UICorner = Instance.new("UICorner")
-            UICorner.CornerRadius = UDim.new(0, 20)
-            UICorner.Parent = PickerFrameOuter
         });
 
         local PickerFrameInner = Library:Create('Frame', {
